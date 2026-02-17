@@ -1,0 +1,179 @@
+/* Слайдер */
+.slider {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Слайд для слайдера */
+.slide {
+  box-shadow: 2px 2px 4px #0000002f;
+  padding: 10px;
+  background: var(--secondary-background);
+  border-radius: 5px;
+  display: none;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/* Картинка в слайдере */
+.slide__image {
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 2px 2px 4px #0000002f;
+  width: 400px;
+  height: 250px;
+}
+
+/* Элементы управления слайдером */
+.slider__controls {
+  display: flex;
+  gap: 12px;
+}
+
+/* Радиокнопка для навигации */
+.slider__radio {
+  accent-color: var(--accent-color);
+  width: 20px;
+  height: 20px;
+}
+
+/* Логика работы слайдера */
+.slider:has(#slide1:checked) .slide:nth-of-type(1) {
+  display: flex;
+}
+
+.slider:has(#slide2:checked) .slide:nth-of-type(2) {
+  display: flex;
+}
+
+.slider:has(#slide3:checked) .slide:nth-of-type(3) {
+  display: flex;
+}
+
+/* Блок поиска по жанрам */
+.search {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Поле поиска */
+.search__input {
+  width: 270px;
+}
+
+/* Блок инфографики */
+.infographics {
+  margin-top: 80px;
+  justify-content: space-around;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Карточка инфографики */
+.info-card {
+  box-shadow: 2px 2px 4px #00000028;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  background: var(--secondary-background);
+  gap: 10px;
+  min-width: 390px;
+}
+
+/* Блок популярных игр */
+.popular-games {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+/* Карточка игры */
+.game-card {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px #00000028;
+  background-color: var(--secondary-background);
+  padding: 10px;
+  gap: 10px;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 3px 3px 5px #00000042;
+}
+
+/* Картинка игры */
+.game-card__image {
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #0000002f;
+  object-fit: cover;
+  width: 320px;
+  height: 200px;
+}
+
+/* Блок партнёров  */
+.partners {
+  margin-bottom: 80px;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Логотип партнёра */
+.partners__logo {
+  width: 250px;
+}
+
+/* Адаптация под планшетную версию */
+@media (max-width: 768px) {
+  .slide__image {
+    width: 335px;
+    height: 190px;
+  }
+
+  .game-card__image {
+    width: 280px;
+    height: 160px;
+  }
+
+  .info-card {
+    min-width: 320px;
+  }
+
+  .partners__logo {
+    width: 200px;
+  }
+}
+
+/* Адаптация под мобильную версию */
+@media (max-width: 360px) {
+  .slide__image {
+    width: 295px;
+    height: 160px;
+  }
+
+  .game-card__image {
+    width: 250px;
+    height: 140px;
+  }
+
+  .info-card {
+    min-width: 290px;
+  }
+
+  .partners__logo {
+    width: 150px;
+  }
+}

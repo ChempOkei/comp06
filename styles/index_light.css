@@ -1,0 +1,21 @@
+/* Светлая палитра цветов */
+:root {
+  --primary-background: #f8f9fa;
+  --secondary-background: #ffffff;
+  --accent-color: #ff6b35;
+  --primary-text: #212529;
+  --secondary-text: #6c757d;
+  --primary-input-background: #c4c7ca;
+  --secondary-input-background: #919497;
+  --primary-placeholder: #56595c;
+}
+
+/* Меняет цвет иконки для карточки инфографики */
+.info-card__icon {
+  filter: invert(1);
+}
+
+/* Меняет цвет бургер меню в шапке сайта */
+.header__burger {
+  filter: invert(1);
+}

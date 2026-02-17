@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/auth.css" />
+
+    <title>Best Games</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="link link_opacity-hover transition">
+        <img alt="logo" src="../images/icons/logo.svg" />
+      </a>
+      <div class="header__tab">
+        <a class="link transition" href="catalog.html">Каталог игр</a>
+        <a class="link transition" href="index.html#search">Поиск</a>
+      </div>
+      <nav class="header__tab">
+        <a class="link transition" href="profile.html">Личный кабинет</a>
+        <a class="link transition" href="login.html">Войти</a>
+      </nav>
+      <button class="link link_opacity-hover header__burger">
+        <img alt="burger-menu" src="../images/icons/burger.svg" />
+      </button>
+    </header>
+    <main class="container">
+      <form class="auth-form">
+        <div class="auth-form__group">
+          <label class="auth-form__label text" for="email">Эл почта:</label>
+          <input
+            placeholder="user@example.com"
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="on"
+            class="input auth-form__input"
+            required
+          />
+        </div>
+        <div class="auth-form__group">
+          <label class="text" for="password">Пароль:</label>
+          <input
+            placeholder="**********"
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="on"
+            class="input auth-form__input"
+            required
+          />
+        </div>
+        <div class="auth-form__footer">
+          <button class="button">Войти</button>
+          <a class="link" href="#">Востанвление пароля</a>
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
+      <div class="footer__tab">
+        <a class="link" href="tel:8-800-999-55-99">8-800-999-55-99</a>
+        <a class="link" href="mailto:best@games.ru">best@games.ru</a>
+        <a class="link" href="#">О нас</a>
+      </div>
+      <div class="footer__tab">
+        <a class="link" href="#">Клиентам</a>
+        <a class="link" href="#">Партнёрам</a>
+        <a class="link" href="#">Контакты</a>
+      </div>
+      <nav class="footer__tab">
+        <a class="link" href="index.html">Главная</a>
+        <a class="link" href="register.html">Регистрация</a>
+        <a class="link" href="login.html">Авторизация</a>
+        <a class="link" href="profile.html">Личный кабинет</a>
+        <a class="link" href="index.html#search">Поиск</a>
+      </nav>
+    </footer>
+  </body>
+</html>

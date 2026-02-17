@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+
+    <title>Best Games</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="link link_opacity-hover transition">
+        <img alt="logo" src="../images/icons/logo.svg" />
+      </a>
+      <div class="header__tab">
+        <a class="link transition" href="catalog.html">Каталог игр</a>
+        <a class="link transition" href="index.html#search">Поиск</a>
+      </div>
+      <nav class="header__tab">
+        <a class="link transition" href="profile.html">Личный кабинет</a>
+        <a class="link transition" href="login.html">Войти</a>
+      </nav>
+      <button class="link link_opacity-hover header__burger">
+        <img alt="burger-menu" src="../images/icons/burger.svg" />
+      </button>
+    </header>
+    <main>
+      <section class="slider container fade-up">
+        <article class="slide">
+          <img
+            alt="Cyberpunk 2077: Phantom Liberty"
+            src="../images/slider/slide1.jpg"
+            class="slide__image"
+          />
+          <h2 class="text text-header">Cyberpunk 2077: Phantom Liberty</h2>
+          <p class="text text_dark">3 499 ₽</p>
+          <a class="button transition" href="catalog.html">Подробнее</a>
+        </article>
+        <article class="slide">
+          <img
+            alt="Elden Ring"
+            src="../images/slider/slide2.jpg"
+            class="slide__image"
+          />
+          <h2 class="text text-header">Elden Ring</h2>
+          <p class="text text_dark">3 499 ₽</p>
+          <a class="button transition" href="catalog.html">Подробнее</a>
+        </article>
+        <article class="slide">
+          <img
+            alt="Diablo IV"
+            src="../images/slider/slide3.jpg"
+            class="slide__image"
+          />
+          <h2 class="text text-header">Diablo IV</h2>
+          <p class="text text_dark">3 999 ₽</p>
+          <a class="button transition" href="catalog.html">Подробнее</a>
+        </article>
+        <div class="slider__controls">
+          <input
+            type="radio"
+            class="slider__radio"
+            id="slide1"
+            name="slider-radio"
+            checked
+          />
+          <input
+            type="radio"
+            class="slider__radio"
+            id="slide2"
+            name="slider-radio"
+          />
+          <input
+            type="radio"
+            class="slider__radio"
+            id="slide3"
+            name="slider-radio"
+          />
+        </div>
+      </section>
+      <section class="search fade-up container">
+        <input
+          placeholder="Поиск..."
+          class="search__input input transition"
+          name="search"
+          id="search"
+          list="genre-list"
+        />
+        <datalist id="genre-list">
+          <option value="RPG"></option>
+          <option value="Приключения"></option>
+          <option value="Песочница"></option>
+          <option value="Шутер"></option>
+        </datalist>
+        <button class="button transition">Найти</button>
+      </section>
+      <section class="infographics container fade-up">
+        <article class="info-card">
+          <img
+            alt="prices"
+            class="info-card__icon"
+            src="../images/infographics/prices.svg"
+          />
+          <h2 class="text text-header">Привликательные цены</h2>
+        </article>
+        <article class="info-card">
+          <img
+            alt="discounts"
+            class="info-card__icon"
+            src="../images/infographics/discounts.svg"
+          />
+          <h2 class="text text-header">Ежемесячные акции</h2>
+        </article>
+        <article class="info-card">
+          <img
+            alt="support"
+            class="info-card__icon"
+            src="../images/infographics/support.svg"
+          />
+          <h2 class="text text-header">Круглосуточная поддержка</h2>
+        </article>
+        <article class="info-card">
+          <img
+            alt="purchase"
+            class="info-card__icon"
+            src="../images/infographics/purchase.svg"
+          />
+          <h2 class="text text-header">Быстрая покупка</h2>
+        </article>
+      </section>
+      <section class="popular-games container fade-up">
+        <a class="link" href="catalog.html">
+          <article class="game-card">
+            <img
+              class="game-card__image"
+              alt="Cyberpunk 2077"
+              src="../images/games/image2.jpg"
+            />
+            <h2 class="text text-header">Cyberpunk 2077</h2>
+            <p class="text">Action/RPG</p>
+            <p class="text">CD Projekt Red</p>
+            <p class="text">2 999 ₽</p>
+            <div>
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star-empty" src="../images/icons/star-empty.svg" />
+            </div>
+            <div class="button transition">Каталог игр</div>
+          </article>
+        </a>
+        <a class="link" href="catalog.html">
+          <article class="game-card">
+            <img
+              class="game-card__image"
+              alt="Elden Ring"
+              src="../images/games/image3.jpg"
+            />
+            <h2 class="text text-header">Elden Ring</h2>
+            <p class="text">Souls-like RPG</p>
+            <p class="text">FromSoftware</p>
+            <p class="text">3 499 ₽</p>
+            <div>
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+            </div>
+            <div class="button transition">Каталог игр</div>
+          </article>
+        </a>
+        <a class="link" href="catalog.html">
+          <article class="game-card">
+            <img
+              class="game-card__image"
+              alt="The Witcher 3: Wild Hunt"
+              src="../images/games/image5.jpg"
+            />
+            <h2 class="text text-header">The Witcher 3: Wild Huntg</h2>
+            <p class="text">RPG</p>
+            <p class="text">CD Projekt Red</p>
+            <p class="text">1 299 ₽</p>
+            <div>
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+            </div>
+            <div class="button transition">Каталог игр</div>
+          </article>
+        </a>
+        <a class="link" href="catalog.html">
+          <article class="game-card">
+            <img
+              class="game-card__image"
+              alt=" Assassin's Creed Valhalla"
+              src="../images/games/image1.jpg"
+            />
+            <h2 class="text text-header">Assassin's Creed Valhalla</h2>
+            <p class="text">Action/RPG</p>
+            <p class="text">Ubisoft</p>
+            <p class="text">2 799 ₽</p>
+            <div>
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star-empty" src="../images/icons/star-empty.svg" />
+            </div>
+            <div class="button transition">Каталог игр</div>
+          </article>
+        </a>
+        <a class="link" href="catalog.html">
+          <article class="game-card">
+            <img
+              class="game-card__image"
+              alt=" Assassin's Creed Valhalla"
+              src="../images/games/image4.jpg"
+            />
+            <h2 class="text text-header">Diablo IV</h2>
+            <p class="text">Action/RPG</p>
+            <p class="text">Blizzard Entertainment</p>
+            <p class="text">3 999 ₽</p>
+            <div>
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star" src="../images/icons/star.svg" />
+              <img alt="star-empty" src="../images/icons/star-empty.svg" />
+            </div>
+            <div class="button transition">Каталог игр</div>
+          </article>
+        </a>
+      </section>
+      <section class="partners container fade-up">
+        <img
+          class="partners__logo"
+          src="../images/partners/Steam_icon_logo.svg.png"
+          alt="Steam"
+        />
+        <img
+          class="partners__logo"
+          src="../images/partners/Xbox_logo_(2019).svg.png"
+          alt="Xbox"
+        />
+        <img
+          class="partners__logo"
+          src="../images/partners/max-app-icon-on-a-transparent-background-free-.png"
+          alt="MAX"
+        />
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__tab">
+        <a class="link" href="tel:8-800-999-55-99">8-800-999-55-99</a>
+        <a class="link" href="mailto:best@games.ru">best@games.ru</a>
+        <a class="link" href="#">О нас</a>
+      </div>
+      <div class="footer__tab">
+        <a class="link" href="#">Клиентам</a>
+        <a class="link" href="#">Партнёрам</a>
+        <a class="link" href="#">Контакты</a>
+      </div>
+      <nav class="footer__tab">
+        <a class="link" href="index.html">Главная</a>
+        <a class="link" href="register.html">Регистрация</a>
+        <a class="link" href="login.html">Авторизация</a>
+        <a class="link" href="profile.html">Личный кабинет</a>
+        <a class="link" href="index.html#search">Поиск</a>
+      </nav>
+    </footer>
+  </body>
+</html>

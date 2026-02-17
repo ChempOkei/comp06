@@ -1,0 +1,55 @@
+/* Форма авторизации */
+.auth-form {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Обёртка для группировки элементов */
+.auth-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Поле ввода */
+.auth-form__input {
+  width: 300px;
+}
+
+/* Обертка для группировки чекбокса */
+.auth-form__checkbox-group {
+  width: 320px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Чекбокс формы авторизации */
+.auth-form__checkbox {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--accent-color);
+}
+
+/* Нижняя часть формы авторизации */
+.auth-form__footer {
+  align-items: center;
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Кнопка формы авторизации */
+.auth-form__button {
+  width: 320px;
+}
+
+/* Тело страницы */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

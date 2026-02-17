@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="12mm"
+   viewBox="0 0 16 12"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:#8b949e;fill-opacity:1;stroke-width:0.208008"
+       id="rect1-8"
+       width="3.0328732"
+       height="1.5536999"
+       x="-13.72573"
+       y="-1.0673587"
+       transform="matrix(-0.99120466,-0.13233793,-0.13084207,0.99140322,0,0)" />
+    <rect
+       style="fill:#8b949e;fill-opacity:1;stroke-width:0.208008"
+       id="rect1"
+       width="3.0328732"
+       height="1.5536999"
+       x="2.4271524"
+       y="1.0334768"
+       transform="matrix(0.99120466,-0.13233793,0.13084207,0.99140322,0,0)" />
+    <path
+       style="fill:#ff6b35;fill-opacity:1;stroke-width:0.333306"
+       d="M 2.1650034,8.7073411 C 0.99386508,8.5350266 0.7680602,6.8308724 0.62754544,5.6145883 0.48703067,4.3983041 0.53041677,2.7408225 1.5176527,1.8300355 2.5048886,0.91924852 4.1356915,1.0119828 5.6159045,0.90309782 c 1.480213,-0.1088853 3.3433519,-0.070529 4.7337525,0 1.390401,0.070529 2.747393,0.17032468 3.629497,0.68277298 0.882105,0.5124483 1.213073,0.7517128 1.456539,2.0347058 0.243466,1.2829929 0.136837,4.8268232 -1.294701,5.1681527 C 12.709454,9.1300587 13.45066,6.85788 11.834806,6.1029175 10.218951,5.347955 6.3334351,5.3103844 4.6734876,6.0215296 3.0135401,6.7326748 3.3361417,8.8796556 2.1650034,8.7073411 Z"
+       id="path1" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.61223px;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ff6b35;fill-opacity:1;stroke-width:0.217685"
+       x="16.493769"
+       y="10.148023"
+       id="text1"
+       transform="scale(0.89039545,1.1230965)"><tspan
+         id="tspan1"
+         style="text-align:center;text-anchor:middle;fill:#ff6b35;fill-opacity:1;stroke-width:0.217685"
+         x="8.8209801"
+         y="10.148023">Best Games</tspan></text>
+    <circle
+       style="fill:#8b949e;fill-opacity:1;stroke-width:0.306755"
+       id="path2"
+       cx="3.2000382"
+       cy="2.812845"
+       r="0.58078986" />
+    <circle
+       style="fill:#8b949e;fill-opacity:1;stroke-width:0.306755"
+       id="path2-5"
+       cx="4.2200408"
+       cy="3.7136502"
+       r="0.58078986" />
+    <circle
+       style="fill:#8b949e;fill-opacity:1;stroke-width:0.306755"
+       id="path2-52"
+       cx="3.0865543"
+       cy="4.7947593"
+       r="0.58078986" />
+    <circle
+       style="fill:#8b949e;fill-opacity:1;stroke-width:0.306755"
+       id="path2-2"
+       cx="2.142101"
+       cy="3.7208717"
+       r="0.58078986" />
+    <circle
+       style="fill:#8b949e;fill-opacity:1;stroke-width:0.306755"
+       id="path2-6"
+       cx="13.192306"
+       cy="2.9639442"
+       r="0.58078986" />
+    <circle
+       style="fill:#8b949e;fill-opacity:1;stroke-width:0.306755"
+       id="path2-1"
+       cx="11.777569"
+       cy="4.4986706"
+       r="0.58078986" />
+  </g>
+</svg>

@@ -1,0 +1,205 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-VariableFont_wdth\,wght.ttf");
+}
+
+/* Глобальные переменные */
+:root {
+  --primary-background: #0f1523;
+  --secondary-background: #1a2238;
+  --accent-color: #ff6b35;
+  --primary-text: #fff;
+  --secondary-text: #8b949e;
+  --primary-input-background: #3b3e46;
+  --secondary-input-background: #30333a;
+  --primary-placeholder: #bfc6ce;
+}
+
+/* Контейнер */
+.container {
+  margin: 0 auto;
+  width: 1440px;
+}
+
+/* Ссылка */
+.link {
+  font-family: "Roboto";
+  text-decoration: none;
+  color: var(--primary-text);
+}
+
+.link:hover {
+  color: var(--secondary-text);
+}
+
+/* Другой вариант hover для ссылки */
+.link_opacity-hover:hover {
+  color: var(--primary-text);
+  opacity: 0.7;
+}
+
+/* Текст */
+.text {
+  font-family: "Roboto";
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--primary-text);
+}
+
+/* Заголовок */
+.text-header {
+  font-family: "Montserrat";
+  font-size: 22px;
+}
+
+/* Тёмная вариация текста */
+.text_dark {
+  color: var(--secondary-text);
+}
+
+/* Кнопка */
+.button {
+  font-family: "Roboto";
+  border: none;
+  color: var(--primary-text);
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+/* Поле ввода */
+.input {
+  font-family: "Roboto";
+  border-radius: 5px;
+  border: 2px solid var(--secondary-background);
+  padding: 12px;
+  background-color: var(--primary-input-background);
+  color: var(--primary-text);
+}
+
+.input:hover {
+  background-color: var(--secondary-input-background);
+}
+
+.input::placeholder {
+  color: var(--primary-placeholder);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.input_non-hover:hover {
+  background-color: var(--primary-input-background);
+}
+
+/* Обёртка для анимации */
+.fade-up {
+  animation: fade-up 250ms ease-in-out;
+}
+
+/* Общие сбросы и плавные анимации*/
+* {
+  transition: all 80ms ease-in-out;
+  margin: 0;
+}
+
+/* Задний фон */
+body {
+  background-color: var(--primary-background);
+}
+
+/* Плавный scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Анимация*/
+@keyframes fade-up {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.65;
+  }
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+}
+
+/* Адаптация для контейнера */
+@media (max-width: 1540px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    width: 860px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 320px;
+  }
+}
+
+/* Адаптация под планшетную версию */
+@media (max-width: 768px) {
+  .link {
+    font-size: 13px;
+  }
+
+  .text {
+    font-size: 11px;
+  }
+
+  .text-header {
+    font-size: 18px;
+  }
+
+  .button {
+    font-size: 13px;
+  }
+}
+
+/* Адаптация под мобильную версию */
+@media (max-width: 360px) {
+  .link {
+    font-size: 11px;
+  }
+
+  .text {
+    font-size: 9px;
+  }
+
+  .text-header {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/profile.css" />
+
+    <title>Best Games</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="link link_opacity-hover transition">
+        <img alt="logo" src="../images/icons/logo.svg" />
+      </a>
+      <div class="header__tab">
+        <a class="link transition" href="catalog.html">Каталог игр</a>
+        <a class="link transition" href="index.html#search">Поиск</a>
+      </div>
+      <nav class="header__tab">
+        <a class="link transition" href="profile.html">Личный кабинет</a>
+        <a class="link transition" href="login.html">Войти</a>
+      </nav>
+      <button class="link link_opacity-hover header__burger">
+        <img alt="burger-menu" src="../images/icons/burger.svg" />
+      </button>
+    </header>
+    <main class="container">
+      <section class="content-wraper">
+        <h1 class="text text-header">Информация о пользователе:</h1>
+        <div class="user-data__group">
+          <label class="user-data__label text" for="email">Эл почта:</label>
+          <input
+            value="ivan.petrov@example.com"
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="on"
+            class="input user-data__field input_non-hover"
+            readonly
+            disabled
+          />
+        </div>
+        <div class="user-data__group">
+          <label class="user-data__label text" for="surname">Фамилия:</label>
+          <input
+            value="Петров"
+            id="surname"
+            name="surname"
+            type="text"
+            autocomplete="on"
+            class="input user-data__field input_non-hover"
+            readonly
+            disabled
+          />
+        </div>
+        <div class="user-data__group">
+          <label class="user-data__label text" for="name">Имя:</label>
+          <input
+            value="Иван"
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="on"
+            class="input user-data__field input_non-hover"
+            readonly
+            disabled
+          />
+        </div>
+        <div class="user-data__group">
+          <label class="user-data__label text" for="birth-date"
+            >Дата рождения:</label
+          >
+          <input
+            value="1998-05-15"
+            id="birth-date"
+            name="birth-date"
+            type="date"
+            autocomplete="on"
+            class="input user-data__field input_non-hover"
+            readonly
+            disabled
+          />
+        </div>
+        <div class="user-data__group">
+          <label class="user-data__label text" for="phone">Телефон:</label>
+          <input
+            value="+7 (900) 123-45-67"
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="on"
+            class="input user-data__field input_non-hover"
+            readonly
+            disabled
+          />
+        </div>
+      </section>
+      <section class="content-wraper">
+        <h1 class="text text-header">Настройки пользователя:</h1>
+        <button class="button user-settings__button">Сменить пароль</button>
+        <div class="user-settings__checkbox-group">
+          <input
+            checked
+            class="user-settings__checkbox"
+            type="checkbox"
+            name="theme-switch"
+            id="theme-switch"
+          />
+          <label class="text text-header" for="theme-switch">Тёмная тема</label>
+        </div>
+      </section>
+      <section class="content-wraper buy-story">
+        <h1 class="text text-header">История покупок:</h1>
+        <section class="buy-stroy-content">
+          <article class="buy-card">
+            <h2 class="text text-header">Cyberpunk 2077</h2>
+            <p class="text text_dark">15.10.2023</p>
+            <p class="text text_dark">2 999 ₽</p>
+          </article>
+          <article class="buy-card">
+            <h2 class="text text-header">Elden Ring</h2>
+            <p class="text text_dark">10.10.2023</p>
+            <p class="text text_dark">3 499 ₽</p>
+          </article>
+          <article class="buy-card">
+            <h2 class="text text-header">The Witcher 3: Wild Hunt</h2>
+            <p class="text text_dark">05.10.2023</p>
+            <p class="text text_dark">1 299 ₽</p>
+          </article>
+          <article class="buy-card">
+            <h2 class="text text-header">Diablo IV</h2>
+            <p class="text text_dark">01.10.2023</p>
+            <p class="text text_dark">3 999 ₽</p>
+          </article>
+        </section>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__tab">
+        <a class="link" href="tel:8-800-999-55-99">8-800-999-55-99</a>
+        <a class="link" href="mailto:best@games.ru">best@games.ru</a>
+        <a class="link" href="#">О нас</a>
+      </div>
+      <div class="footer__tab">
+        <a class="link" href="#">Клиентам</a>
+        <a class="link" href="#">Партнёрам</a>
+        <a class="link" href="#">Контакты</a>
+      </div>
+      <nav class="footer__tab">
+        <a class="link" href="index.html">Главная</a>
+        <a class="link" href="register.html">Регистрация</a>
+        <a class="link" href="login.html">Авторизация</a>
+        <a class="link" href="profile.html">Личный кабинет</a>
+        <a class="link" href="index.html#search">Поиск</a>
+      </nav>
+    </footer>
+  </body>
+</html>
