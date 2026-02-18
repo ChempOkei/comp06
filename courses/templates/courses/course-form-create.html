@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course Admin · Создать курс</title>
+  <style>
+    :root{--bg:#f3f4f6;--aside:#ffffff;--card:#ffffff;--border:#e5e7eb;--text:#111827;--muted:#6b7280;--accent:#2563eb;--danger:#b91c1c}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial;background:var(--bg);color:var(--text);min-height:100vh}
+    .shell{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+    .aside{background:var(--aside);border-right:1px solid var(--border);padding:22px 18px;position:sticky;top:0;height:100vh}
+    .muted{color:var(--muted)}
+    .nav{display:grid;gap:8px}
+    .nav a{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:12px;text-decoration:none;color:var(--text);border:1px solid transparent}
+    .nav a.active{background:#dbeafe;border-color:#93c5fd}
+    .main{padding:26px 26px 60px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+    h1{margin:0;font-size:22px}
+    .actions{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:9px 12px;border:1px solid #d1d5db;text-decoration:none;background:#ffffff;color:var(--text);cursor:pointer}
+    .btn.primary{border-color:#2563eb;background:#2563eb;color:#ffffff}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:0 12px 35px rgba(15,23,42,.06)}
+    .cardbody{padding:16px}
+    .form{display:grid;gap:12px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{display:block;font-weight:600;margin-bottom:6px}
+    input,textarea{width:100%;border-radius:12px;border:1px solid #d1d5db;padding:10px 12px;background:#f9fafb;color:var(--text);outline:none}
+    input:focus,textarea:focus{border-color:#2563eb;box-shadow:0 0 0 1px #2563eb}
+    textarea{min-height:110px;resize:vertical}
+    .help{font-size:12px;color:var(--muted);margin-top:6px}
+    .err{font-size:12px;color:#b91c1c;margin-top:6px;}
+    .invalid input,.invalid textarea{border-color:#b91c1c;box-shadow:0 0 0 1px #fecaca}
+    @media (max-width:980px){.shell{grid-template-columns:1fr}.aside{position:relative;height:auto;margin-bottom:12px}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="aside">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <div style="width:36px;height:36px;border-radius:10px;background:radial-gradient(circle at 30% 30%,#3b82f6,#1d4ed8);box-shadow:0 10px 25px rgba(37,99,235,.35)"></div>
+        <div>
+          <div style="font-weight:700;">Course Admin</div>
+          <div class="muted" style="font-size:12px;">панель администратора</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Навигация">
+        <a class="active" href="{%url 'admin_index' %}"><span>Курсы</span><span class="muted" style="font-size:12px;">CRUD</span></a>
+        <a href="students.html"><span>Студенты</span><span class="muted" style="font-size:12px;">записи</span></a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="top">
+        <div>
+          <div class="muted" style="font-size:12px;">Создание курса</div>
+          <h1>Новый курс</h1>
+        </div>
+        <div class="actions">
+          <a class="btn" href="{% url 'admin_index' %}">Назад</a>
+          <a class="btn" href="{% url 'admin_logout' %}">Выйти</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cardbody">
+          <form class="form" action="#" method="post" enctype="multipart/form-data" novalidate>
+            {% csrf_token %}
+            <div class="grid">
+              <div class="{% if form.name.errors %}invalid{% endif %}" id="nameField">
+                <label for="name">Название курса</label>
+                <input value="{% if form.name.value %}{{form.name.value}}{% endif %}" id="name" name="name" type="text" maxlength="30" required>
+                <div class="help">Обязательно, максимум 30 символов</div>
+                {% if form.name.errors %}
+                  <div class="err" id="nameError">{{form.name.errors.0}}</div>
+                {% endif %}
+              </div>
+              <div class="{% if form.hours.errors %}invalid{% endif %}" id="hoursField">
+                <label for="hours">Продолжительность (часы)</label>
+                <input value="{% if form.hours.value %}{{form.hours.value}}{% endif %}" id="hours" name="hours" type="number" min="1" max="10" step="1" required>
+                <div class="help">Обязательно, целое число не больше 10</div>
+                {% if form.hours.errors %}
+                  <div class="err" id="hoursError">{{form.hours.errors.0}}</div>
+                {% endif %}
+              </div>
+            </div>
+            <div class="grid">
+              <div class="{% if form.price.errors %}invalid{% endif %}" id="priceField">
+                <label for="price">Цена</label>
+                <input value="{% if form.price.value %}{{form.price.value}}{% endif %}" id="price" name="price" type="text" inputmode="decimal" placeholder="100.00" required>
+                <div class="help">Обязательно, формат xx.xx, не менее 100</div>
+                {% if form.hours.errors %}
+                  <div class="err" id="priceError">{{form.price.errors.0}}</div>
+                {% endif %}
+              </div>
+              <div class="{% if form.img.errors %}invalid{% endif %}" id="imgField">
+                <label for="img">Обложка (JPG)</label>
+                <input id="img" name="img" type="file" accept="image/jpeg" required>
+                <div class="help">Обязательно при создании, JPG/JPEG, максимум 2000 Кб</div>
+                {% if form.img.errors %}
+                  <div class="err" id="imgError">{{form.img.errors.0}}</div>
+                {% endif %}
+              </div>
+            </div>
+            <div class="grid">
+              <div class="{% if form.start_date.errors %}invalid{% endif %}" id="startDateField">
+                <label for="start_date">Дата начала</label>
+                <input value="{% if form.start_date.value %}{{form.start_date.value}}{% endif %}" id="start_date" name="start_date" type="text" placeholder="дд-мм-гггг" required>
+                <div class="help">Обязательно, формат дд-мм-гггг</div>
+                {% if form.start_date.errors %}
+                  <div class="err" id="startDateError">{{form.start_date.errors.0}}</div>
+                {% endif %}
+              </div>
+              <div class="{% if form.end_date.errors %}invalid{% endif %}" id="endDateField">
+                <label for="end_date">Дата окончания</label>
+                <input value="{% if form.end_date.value %}{{form.end_date.value}}{% endif %}" id="end_date" name="end_date" type="text" placeholder="дд-мм-гггг" required>
+                <div class="help">Обязательно, формат дд-мм-гггг</div>
+                {% if form.end_date.errors %}
+                  <div class="err" id="endDateError">{{form.end_date.errors.0}}</div>
+                {% endif %}
+              </div>
+            </div>
+            <div class="{% if form.description.errors %}invalid{% endif %}" id="descriptionField">
+              <label for="description">Описание</label>
+              <textarea id="description" name="description" maxlength="100">{{form.description.value}}</textarea>
+              <div class="help">Необязательно, максимум 100 символов</div>
+              {% if form.description.errors %}
+                <div class="err" id="descriptionError">{{form.description.errors.0}}</div>
+              {% endif %}
+            </div>
+            <div class="actions">
+              <button class="btn primary" type="submit">Создать</button>
+              <a class="btn" href="{% url 'admin_index' %}">Отмена</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
